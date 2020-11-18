@@ -1,0 +1,361 @@
+// color palette
+$primary-color: #80ceca;
+$gray-dark: #626262;
+$bg-gray: #eaf0ee;
+$form-bg: #f9f9f9;
+$secondly-color: #f39800;
+$primary-color: #009e96;
+$facebook: #1877f2;
+$logo-yellow: #fcc900;
+$black: #111111;
+$white: #ffffff;
+$line-gray: #c1c1c1;
+
+// Spacing and layout
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-s: 12px;
+$spacing-sm: 14px;
+$spacing-m: 16px;
+$spacing-ml: 18px;
+$spacing-l: 20px;
+$spacing-lx: 22px;
+$spacing-xl: 24px;
+$spacing-xxl: 28px;
+$spacing-xxl-2: 32px;
+$spacing-xxl-3: 36px;
+$spacing-xxl-4: 40px;
+$spacing-xxl-5: 44px;
+$spacing-xxl-6: 48px;
+$spacing-xxl-7: 52px;
+$spacing-xxl-8: 56px;
+$spacing-xxl-9: 60px;
+$line-height: 1.5;
+
+// Text style catalog
+@font-face {
+  font-family: NotoSansCJKJP;
+  src: local(NotoSansCJKjp-Regular),
+    url(/app/assets/stylesheets/fonts/NotoSansCJKjp-Regular.ttf) format("woff"),
+    url(/app/assets/stylesheets/fonts/NotoSansCJKjp-Regular.ttf)
+      format("truetype"),
+    url(/app/assets/stylesheets/fonts/NotoSansCJKjp-Regular.eot)
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: NotoSansCJKJP;
+  src: local(NotoSansCJKjp-Bold),
+    url(/app/assets/stylesheets/fonts/NotoSansCJKjp-Bold.ttf) format("woff"),
+    url(/app/assets/stylesheets/fonts/NotoSansCJKjp-Bold.ttf) format("truetype"),
+    url(/app/assets/stylesheets/fonts/NotoSansCJKjp-Bold.eot)
+      format("embedded-opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.jpHero {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-xxl-6;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+}
+
+.jpDisplay1 {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-xxl-4;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+}
+
+.jpDisplay2 {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-xxl-3;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.39;
+  letter-spacing: normal;
+}
+
+.jpTitle {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-xl;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+.jpHeading {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-lx;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+.jpSubheading {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-ml;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+.jpBody-pc-bold {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-m;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+.jpBody-pc {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-m;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+.jpBody-sp-bold {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-sm;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+}
+
+.jpBody-sp {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-sm;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+}
+
+.jpcaption {
+  font-family: NotoSansCJKJP, serif;
+  font-size: $spacing-s;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+}
+
+// Components
+
+// stylesheet for the
+// start whole document
+body {
+  height: 59px;
+  font-family: NotoSansCJKJP;
+  line-height: $line-height !important;
+}
+
+// end whole document
+
+// start header
+
+a.nav-link,
+a.nav-link {
+  color: $gray-dark !important;
+}
+
+a.navbar-left {
+  padding-left: 11.5% !important;
+}
+
+@media (max-width: 768px) {
+  a.navbar-left {
+    padding-left: 0% !important;
+  }
+  button.navbar-toggler {
+    padding-right: 0% !important;
+  }
+  nav.navbar.navbar-light.navbar-expand-md {
+    padding-right: 0%;
+  }
+}
+
+// end  header
+
+// start footer
+
+.footer {
+  padding-left: 120px;
+}
+.col-md-3.p-0.copyright.m-0 {
+  padding-left: 100px !important;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-left: 0px;
+  }
+  .col-md-3.p-0.copyright.m-0 {
+    padding: 8% 0% 0% 0% !important;
+  }
+}
+
+// end  footer
+
+// start body
+
+.main-heading-text {
+  height: 71px;
+  text-shadow: 0 $spacing-xxs $spacing-xl rgba(0, 0, 0, 0.45);
+  font-size: $spacing-xxl-9;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: $white;
+}
+
+.cards-div {
+  margin-top: $spacing-xxl-4;
+  margin-left: 16.7%;
+  margin-right: 16.7%;
+}
+
+@media (max-width: 780px) {
+  .cards-div {
+    margin-left: $spacing-s;
+    margin-right: $spacing-s;
+  }
+
+  .card-image {
+    width: 100%;
+  }
+}
+
+.line {
+  margin-top: $spacing-s;
+  margin-bottom: 21px;
+  border-top: 1px solid $line-gray;
+}
+
+.card {
+  margin-bottom: $spacing-xxl-4;
+}
+.col-md-8,
+.col-md-7 {
+  margin-bottom: 100px;
+}
+
+.col-md-4,
+.col-md-5 {
+  padding-left: $spacing-xxl-7 !important;
+}
+
+.spacing {
+  padding-left: $spacing-xxl-7;
+}
+
+.card-image {
+  width: 100%;
+  height: 50.8%;
+}
+
+.text-muted {
+  margin-top: $spacing-m;
+  margin-bottom: $spacing-xs;
+  font-family: NotoSansCJKJP;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--gray-dark);
+}
+
+.card-title {
+  margin-bottom: $spacing-l;
+}
+
+.card-text {
+  margin-top: $spacing-m;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 0;
+  }
+  .project-separator {
+    margin-top: 26px;
+    margin-bottom: $spacing-l;
+    display: block;
+    height: 8px;
+    background-color: #eaf0ee;
+    margin-right: -4%;
+    margin-left: -4%;
+  }
+
+  .col-md-8,
+  .col-md-7 {
+    margin-bottom: $spacing-xxl-6;
+  }
+  .col-md-4,
+  .col-md-5 {
+    padding: 0;
+    margin-bottom: 84px;
+  }
+}
+.tags {
+  margin-bottom: 19px;
+}
+.prefectures {
+  margin-top: $spacing-l;
+}
+
+@media (min-width: 768px) {
+  .col-md-7 {
+    -ms-flex: 0 0 57% !important;
+    flex: 0 0 57% !important;
+    max-width: 57% !important;
+  }
+}
+
+section.col-md-9.main-section {
+  padding-left: 4.5%;
+  padding-right: 6.2%;
+}
+.main-section .col-sm-5.col-md-5 {
+  padding-left: 1.5% !important;
+}
+.main-section .col-md-8, .main-section .col-md-7 {
+  margin-bottom: auto;
+}
+
+// end body

@@ -1,0 +1,42 @@
+<section class="col-md-9 main-section">
+  <span class="breadcrumb m-0 p-0 mt-2">TOP > プロジェクトを探す >
+    <%= @project.title %>
+  </span>
+  <div class="mt-2">
+    <div class="row">
+      <div class="col-sm-5 col-md-5">
+        <%= link_to @project.tag_list.first, tag_projects_path(tag: @project.tag_list.first), class: "btn btn-outline-primary featured-btn" %>
+        <%= link_to @project.prefecture_list.first, prefecture_projects_path(prefecture: @project.prefecture_list.first), class: "btn btn-outline-primary featured-btn" %>
+      </div>
+      <div class="col-sm-7 col-md-7">
+        <div class="top-date-muted">
+          公開日 : <%= @project.start_date.strftime("%Y/%m/%d") %>　終了日 ： <%= @project.end_date.strftime("%Y/%m/%d") %>
+        </div>
+      </div>
+    </div>
+    <h4 class="project-detail-heading">
+      <%= @project.title %>
+    </h4>
+  </div>
+  <div class="mt-4 button-padding-buttom">
+    <button class="btn btn-primary circular-btn primary-color float-right" type="button" style="margin-bottom: 2%;">
+      <i class="fa fa-paper-plane-o" aria-hidden="true"></i> 応募する
+    </button>
+  </div>
+  <br>
+  <div class="mt-4">
+    <%= image_tag "thumbnail.png", class: "col-md-12 p-0" %>
+  </div>
+  <div class="mt-4 project-description">
+    <%= sanitize @project.description %>
+  </div>
+  <hr class="divider-line">
+  <div class="mt-4 text-center">
+    <button class="btn btn-primary btn-rectangle primary-color btn-round-apply " type="button">
+      <i class="fa fa-paper-plane-o" aria-hidden="true"></i> 応募する
+    </button>
+  </div>
+  <div class="mt-5 related-project-container">
+    <%= render partial: "related_projects" %>
+  </div>
+</section>

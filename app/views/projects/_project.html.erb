@@ -1,0 +1,18 @@
+<div class="card p-0 col-md-12">
+  <div class="card-body col-md-12">
+    <%= link_to project_path(project.slug) do %>
+      <%= image_tag "card-img.png", class: "col-md-12 card-image" %>
+      <div class="row col-md-12 p-0 m-0">
+        <h6 class="text-muted featured-date deadline-date">
+          募集終了 | <%= project.end_date.strftime("%Y/%m/%d") %>
+        </h6>
+      </div>
+      <h4 class="card-title"> <%= project.title %></h4>
+    <% end %>
+    <div>
+      <%= link_to project.tag_list.first, tag_projects_path(tag: project.tag_list.first), class: "btn btn-outline-primary featured-btn" %>
+      <%= link_to project.prefecture_list.first, prefecture_projects_path(prefecture: project.prefecture_list.first), class: "btn btn-outline-primary featured-btn" %>
+    </div>
+    <p class="card-text project-description  short-description "><%= strip_tags(project.description).truncate(150) %></p>
+  </div>
+</div>

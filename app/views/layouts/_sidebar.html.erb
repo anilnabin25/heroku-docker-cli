@@ -1,0 +1,25 @@
+<div class="col-md-12 pr-0">
+  <div class="tags">
+    <span class="color-primary tag"><%= I18n.t("tags") %></span>
+    <ul>
+      <% @tags.each do |tag| %>
+        <li>
+          <%= link_to tag["name"], tag_projects_path(tag: tag["name"]), class: "tag-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <hr>
+  <div class="prefectures">
+    <span class="color-primary tag"><%= I18n.t("prefectures") %></span>
+    <div class="mt-2">
+      <div class="row">
+        <% @prefectures.each do |prefecture| %>
+          <div class="col-xs">
+            <%= link_to prefecture["name"], prefecture_projects_path(prefecture: prefecture["name"]), class: "area-link area-span" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

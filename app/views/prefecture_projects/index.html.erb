@@ -1,0 +1,25 @@
+<section class="cards-div">
+  <div class="col-md-9 row m-0 m-auto p-0">
+    <div class="col-md-8 mb-4">
+      <span>
+        <%= image_tag "prefecture.png", class: "featured-icon" %>
+        <span class="mic-text"><%= @prefecture %></span>
+      </span>
+      <div class="line"></div>
+      <% @projects.each do |project| %>
+        <%= render partial: "projects/project", locals: { project: project } %>
+        <div class="project-saprator"> </div>
+      <% end %>
+      <div class="pagination-div col-md-12 mt-5">
+        <nav class="col-md-6 m-auto">
+          <ul class="pagination">
+            <%= pagination_links(@projects) %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="col-md-4 pr-2 pl-2 mb-4">
+      <%= render "layouts/sidebar" %>
+    </div>
+  </div>
+</section>

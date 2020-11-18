@@ -1,0 +1,8 @@
+ja:
+  tags: "タグ"
+  prefectures: "地域"
+  cannot_be_before_the_start_date: "開始日より前にすることはできません"
+  will_paginate:
+    previous_label: "前"
+    next_label: "次"
+    page_gap: "&hellip;"

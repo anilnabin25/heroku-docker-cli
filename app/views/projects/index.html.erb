@@ -1,0 +1,21 @@
+<section class="main">
+  <span class="main-text">地域と私達のつながりをつくる</span>
+</section>
+<section class="cards-div">
+  <div class="col-md-12 row m-0 p-0">
+    <div class="col-md-7 p-0">
+      <span>
+        <%= image_tag "Framemic.png", class: "featured-icon" %>
+        <span class="mic-text">注目のプロジェクト</span>
+      </span>
+      <div class="line"></div>
+      <% @projects.each do |project| %>
+        <%= render partial: "project", locals: { project: project } %>
+        <div class="project-separator"> </div>
+      <% end %>
+    </div>
+    <div class="col-md-5">
+      <%= render "layouts/sidebar" %>
+    </div>
+  </div>
+</section>

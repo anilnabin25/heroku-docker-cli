@@ -1,0 +1,22 @@
+<h3 class="related-projects pt-22">同じ地域のプロジェクト</h3>
+<div class="mt-3 row">
+  <% @related_projects.each do |project| %>
+    <div class="col-md-6 mb-4">
+      <%= link_to project_path(project.slug) do %>
+        <%= image_tag "Rectangle 10.png", class: "col-md-12 p-0" %>
+        <span class="project-sub-image-title">
+          <span class="start-date release-date">公開日 | <%= project.start_date.strftime("%Y/%m/%d") %></span>
+          <span class="end-date  deadline-date">募集終了 | <%= project.end_date.strftime("%Y/%m/%d") %></span>
+        </span>
+        <h4 class="project-title">
+          <strong> <%= project.title %> </strong>
+        </h4>
+      <% end %>
+      <%= link_to project.tag_list.first, tag_projects_path(tag: project.tag_list.first), class: "btn btn-outline-primary featured-btn" %>
+      <%= link_to project.prefecture_list.first, prefecture_projects_path(prefecture: project.prefecture_list.first), class: "btn btn-outline-primary featured-btn" %>
+      <p class="project-description short-description related-discription">
+        <%= strip_tags(project.description).truncate(150) %>
+      </p>
+    </div>
+  <% end %>
+</div>

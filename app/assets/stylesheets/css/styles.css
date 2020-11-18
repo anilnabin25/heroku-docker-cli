@@ -1,0 +1,27 @@
+/*start new custom css for the project controllers implementation */
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #009E96;
+  border-color: #009E96;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus {
+  box-shadow: 0 0 0 0.2rem #009E96;
+}
+
+.button-padding-buttom {
+  padding-bottom: 1.5%;
+}
+
+.circular-btn {
+  border-radius: 40px;
+  padding: 8px 36px;
+  box-sizing: border-box;
+}
+.circular-btn:hover {
+  padding: 7px 35px;
+  border: 1px solid #009E96;
+}
+
+/*end new custom css for the project controllers implementation */

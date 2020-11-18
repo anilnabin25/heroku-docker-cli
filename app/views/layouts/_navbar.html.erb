@@ -1,0 +1,28 @@
+<nav class="navbar navbar-light navbar-expand-md">
+  <div class="container-fluid">
+    <a class="navbar-left" href="<%= root_path %>">
+      <%= image_tag "logo.png" %>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcol-1" aria-controls="navcol-1" aria-expanded="false" aria-label="Toggle navigation"  onclick="toggleMobileIcon()">
+      <span class="navbar-toggler-icon-mobile" id="navbar-toggler-icon-mobile"></span>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navcol-1">
+      <ul class="nav navbar-nav">
+        <li class="nav-item mr-4">
+          <%= link_to "運営会社", "#", class: "nav-link nav-operating-company" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "お問い合わせ", "#", class: "nav-link nav-contact-us" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="below-nav"></div>
+<script>
+  function toggleMobileIcon() {
+    elementClassList = document.getElementsByClassName("navbar-toggler-icon-mobile")[0].classList;
+    (elementClassList.length > 1) ? elementClassList.remove("display-inline-block"): elementClassList.add("display-inline-block");
+  }
+</script>
